@@ -1,4 +1,4 @@
-require_relative './login_page'
+require_relative './account_page'
 require_relative './base_page'
 
 class IndexPage < BasePage
@@ -18,7 +18,8 @@ class IndexPage < BasePage
 
   def login_as(username, password)
     @driver.find_element(:id, 'account').find_element(:css, 'a').click
-    LoginPage.new(driver).login_as(username, password)
+    AccountPage.new(driver).login_as(username, password)
+    self
   end
 
 

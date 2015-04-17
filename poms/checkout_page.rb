@@ -23,10 +23,22 @@ class CheckoutPage < BasePage
       end
 
     end
-
+    self
   end
 
   def is_empty?
-    @driver.find_element(:css, "#entry-element").text.contains?("Oops, there is nothing in your cart.")
+    @driver.find_element(:css, "div.entry-content").text.include?("Oops, there is nothing in your cart.")
   end
+
+  def continue_to_info_step
+    @driver.find_element(:css, "a.step2").click
+    @driver.find_element(:css, 'div.slide2[style="display: block;"]')
+    self
+  end
+
+  def checkout_total
+    @driver.find_element(:id, "checkout_total").text
+  end
+
+
 end
