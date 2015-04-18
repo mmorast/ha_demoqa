@@ -10,9 +10,9 @@ Pre-requisites:
 
 Assumptions:
 - The POM assumes that navigation through UI is not always needed to get to a page. So some pages can be accessed with direct URL that may be generated.
-- Assumes that given small number of tests a test data abstraction system is not needed to abstract data the way the POM abstracts site functionality
+- Assumes that given small number of tests, a system to abstract test data is not needed to abstract data the way the POM abstracts site functionality
 - Assumes a fresh browser between each test to reset environment
-- Assumes an empty initial shopping cart. Saw this issue with test at last momemnt last night. Will repair this if I get time
+- Assumes an empty initial shopping cart. Saw this issue with test at last moment last night. Will repair this if I get time
  
 
 ##Steps to setup environment in Linux or OS X and run tests. Commands are all run and tested in bash and zsh.
